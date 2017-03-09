@@ -1,16 +1,18 @@
 <div class='container text-center' ng-controller='weatherCtrl'>
 <div class='jumbotron'>
-<h1>Weather App</h1>
-
-
+<h1>Weather App </h1>
+<p>Lat : {{lat}}</p>
+<p>Lon : {{lon}}</p>
+<p style='color: red'>{{error}}</p>
 
 <a href="#" class='btn btn-default' ng-click='showOptions = !showOptions'> {{showOptions ? "Hide" : "Options"}}</a>
+<a href='#' class='btn btn-danger' ng-click='getLocal()'>Get Local Weather</a>
 
 </div>
 
 
 
-<weather-options ng-show='showOptions'></weather-options>
+<weather-options ng-show='showOptions' ></weather-options>
 
 <div class='container weather-data'>
   <h3>{{weatherData.name}}  {{weatherData.sys.country}}</h3>
