@@ -7,8 +7,9 @@ angular.module('weatherApp', [
 ])
 .controller('weatherCtrl',['$scope' ,'openWeatherApi','$timeout',function($scope,openWeatherApi,$timeout){
 var lat, lon;
-
+ // store our user input
   $scope.options = {};
+  // if true show the options form
   $scope.showOptions = false;
   // if true set metric units otherwise imperial
   $scope.units = true;
@@ -44,8 +45,7 @@ $scope.error = 'Status : ' + status + 'Something went wrong!';
 
 
     });
-}
-
+};
 
 
 
@@ -65,7 +65,7 @@ var cb ='&callback=JSON_CALLBACK';
 
 return{
 getByZip: function(zip,country,units){
-
+// set the units depending on selection
 units = units ? '&units=metric' : '&units=imperial';
   return $http.jsonp(apiUrl+'zip='+zip+','+country+units+apiKey+cb);
 
