@@ -17,7 +17,9 @@
 <div class='container weather-data'>
   <h3>{{weatherData.name}}  {{weatherData.sys.country}}</h3>
   <p>{{weatherData.weather[0].main}}</p>
-  <p>{{weatherData.main.temp}}<span>{{units ? "°C" : "℉"}}</span></p>
+  <img ng-src="http://openweathermap.org/img/w/{{weatherData.weather[0].icon}}.png">
+  <p ng-class="{cold: (weatherData.main.temp < 15 && units) || (weatherData.main.temp < 59 && !units),
+    warm: (weatherData.main.temp > 15 && units) || (weatherData.main.temp > 59 && !units) }">{{weatherData.main.temp}}<span>{{units ? " °C" : " ℉"}}</span></p>
 </div>
 
 
