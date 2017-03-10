@@ -15,13 +15,14 @@ var lat, lon;
   $scope.units = true;
 
   $scope.getWeatherByZip = function(){
+      $scope.error = '';
   //  alert('zip: ' + $scope.options.zip);
 openWeatherApi.getByZip($scope.options.zip,$scope.options.country,$scope.units)
 .success(function(result){
   $scope.weatherData = result;
 })
 .error(function(error,status){
-  $scope.error = 'Status : ' + status + 'Something went wrong!';
+  $scope.error = 'Status : ' + status + ' Something went wrong!';
 });
   };
 // added a geolocation function to run ASAP
@@ -37,11 +38,25 @@ openWeatherApi.getByZip($scope.options.zip,$scope.options.country,$scope.units)
     }
   }();
 $scope.getLocal = function(){
-  openWeatherApi.getLocalWeather($scope.lat,$scope.lon,$scope.units).success(function(result){
+    $scope.error = '';
+  openWeatherApi.getLocalWeather($scope.lat,$scope.lon,$scope.units)
+  .success(function(result){
       $scope.weatherData = result;
     }).error(function(error,status){
 
-$scope.error = 'Status : ' + status + 'Something went wrong!';
+$scope.error = 'Status : ' + status + ' Something went wrong!';
+
+
+    });
+};
+
+$scope.getCity = function(){
+  openWeatherApi.getByCityName($scope.options.city,$scope.units)
+  .success(function(result){
+      $scope.weatherData = result;
+    }).error(function(error,status){
+
+$scope.error = 'Status : ' + status + ' Something went wrong!';
 
 
     });
@@ -49,12 +64,11 @@ $scope.error = 'Status : ' + status + 'Something went wrong!';
 
 
 
-
 }])
-.directive('weatherOptions',function(){
+.directive('cityWeatherOptions',function(){
   return{
     restrict:'E',
-    templateUrl:'partials/weather-options.html',
+    templateUrl:'partials/city-weather-options.html',
     replace: true
   }
 })
@@ -64,12 +78,7 @@ var apiKey ='&APPID=3f2a43f3dff44e5e01573b363cbea2fd';
 var cb ='&callback=JSON_CALLBACK';
 
 return{
-getByZip: function(zip,country,units){
-// set the units depending on selection
-units = units ? '&units=metric' : '&units=imperial';
-  return $http.jsonp(apiUrl+'zip='+zip+','+country+units+apiKey+cb);
 
-},
 getLocalWeather: function(lat,lon,units){
 units = units ? '&units=metric' : '&units=imperial';
   return $http.jsonp(apiUrl+'lat='+lat+'&lon='+lon+units+apiKey+cb);

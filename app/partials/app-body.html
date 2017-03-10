@@ -12,16 +12,18 @@
 
 
 
-<weather-options ng-show='showOptions' ></weather-options>
 
 <div class='container weather-data'>
   <h3>{{weatherData.name}}  {{weatherData.sys.country}}</h3>
   <p>{{weatherData.weather[0].main}}</p>
   <img ng-src="http://openweathermap.org/img/w/{{weatherData.weather[0].icon}}.png">
   <p ng-class="{cold: (weatherData.main.temp < 15 && units) || (weatherData.main.temp < 59 && !units),
-    warm: (weatherData.main.temp > 15 && units) || (weatherData.main.temp > 59 && !units) }">{{weatherData.main.temp}}<span>{{units ? " °C" : " ℉"}}</span></p>
+    warm: (weatherData.main.temp > 15 && units) || (weatherData.main.temp > 59 && !units) }">
+    <!--if there is no temp hide the unit symbol!!! -->
+    {{weatherData.main.temp }}<span>{{weatherData.main.temp ? (units ? " °C" : " ℉") : ''}}</span></p>
 </div>
 
 
+<city-weather-options ng-show='showOptions' ></city-weather-options>
 
 </div>
