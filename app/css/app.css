@@ -3,3 +3,11 @@
 #zip{
   margin-left: 10px;
 }
+.cold{
+  color: blue;
+  font-size: 1.4em;
+}
+.warm{
+  color: red;
+  font-size: 1.4em;
+}
