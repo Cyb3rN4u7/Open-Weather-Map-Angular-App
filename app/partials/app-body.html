@@ -7,7 +7,7 @@
 
 <a href="#" class='btn btn-default' ng-click='showOptions = !showOptions'> {{showOptions ? "Hide" : "Options"}}</a>
 <a href='#' class='btn btn-danger' ng-click='getLocal()'>Get Local Weather</a>
-
+<a href="#" class='btn btn-default' ng-click='units = !units'>  {{units ? "°C" : "℉"}}</a>
 </div>
 
 
@@ -17,6 +17,7 @@
 <div class='container weather-data'>
   <h3>{{weatherData.name}}  {{weatherData.sys.country}}</h3>
   <p>{{weatherData.weather[0].main}}</p>
+  <p>{{weatherData.main.temp}}<span>{{units ? "°C" : "℉"}}</span></p>
 </div>
 
 
