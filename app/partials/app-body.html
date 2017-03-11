@@ -1,29 +1,40 @@
 <div class='container text-center' ng-controller='weatherCtrl'>
 <div class='jumbotron'>
 <h1>Weather App </h1>
-<p>Lat : {{lat}}</p>
-<p>Lon : {{lon}}</p>
+
 <p style='color: red'>{{error}}</p>
 
-<a href="#" class='btn btn-default' ng-click='showOptions = !showOptions'> {{showOptions ? "Hide" : "Options"}}</a>
-<a href='#' class='btn btn-danger' ng-click='getLocal()'>Get Local Weather</a>
+<a href="#" class='btn btn-default btn-options' ng-click='showOptions = !showOptions'> {{showOptions ? "Hide" : "Options"}}</a>
+<a href='#' class='btn btn-default ' ng-click='getLocal()'>Local Weather</a>
 <a href="#" class='btn btn-default' ng-click='units = !units'>  {{units ? "°C" : "℉"}}</a>
-</div>
 
+<city-weather-options ng-show='showOptions' ></city-weather-options>
+</div>
 
 
 
 <div class='container weather-data'>
-  <h3>{{weatherData.name}}  {{weatherData.sys.country}}</h3>
-  <p>{{weatherData.weather[0].main}}</p>
-  <img ng-src="http://openweathermap.org/img/w/{{weatherData.weather[0].icon}}.png">
+
+  <h2 class='location-title'>{{weatherData ? (weatherData.name +','+ weatherData.sys.country) : '' }} </h2>
+<p class='weather-main'>{{weatherData.weather[0].main}}</p>
+
   <p ng-class="{cold: (weatherData.main.temp < 15 && units) || (weatherData.main.temp < 59 && !units),
     warm: (weatherData.main.temp > 15 && units) || (weatherData.main.temp > 59 && !units) }">
     <!--if there is no temp hide the unit symbol!!! -->
-    {{weatherData.main.temp }}<span>{{weatherData.main.temp ? (units ? " °C" : " ℉") : ''}}</span></p>
+    {{weatherData.main.temp }}<span>{{weatherData ? (units ? "°C" : "℉") : ''}}</span></p>
+
+
+
+<img width='70px'  ng-src="http://openweathermap.org/img/w/{{weatherData.weather[0].icon}}.png">
+
+
+
+<p class="text-muted description">{{weatherData ? weatherData.weather[0].description + ' ,
+  humidity is at ' + weatherData.main.humidity + '% , winds at ' + weatherData.wind.speed +
+   (units ? " meters/sec" : ' miles/hour' ): ''}}</p>
 </div>
 
 
-<city-weather-options ng-show='showOptions' ></city-weather-options>
+
 
 </div>
