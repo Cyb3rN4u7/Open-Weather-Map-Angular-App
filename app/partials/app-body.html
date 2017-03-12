@@ -14,22 +14,35 @@
 
 
     <div class='container weather-data'>
+      <div class="row">
+        <div class='col-md-12'>
 
-        <h2 class='location-title'>{{weatherData ? (weatherData.name +','+ weatherData.sys.country) : '' }} </h2>
-        <p class='weather-main'>{{weatherData.weather[0].main}}</p>
+          <h1>Now</h1>
+          <h2 class='location-title'>{{weatherData ? (weatherData.name +','+ weatherData.sys.country) : '' }} </h2>
+          <p class='weather-main'>{{weatherData.weather[0].main}}</p>
 
-        <p ng-class="{cold: (weatherData.main.temp < 15 && units) || (weatherData.main.temp < 59 && !units),
-    warm: (weatherData.main.temp > 15 && units) || (weatherData.main.temp > 59 && !units) }">
-            <!--if there is no temp hide the unit symbol!!! -->
-            {{weatherData.main.temp }}<span>{{weatherData ? (units ? "°C" : "℉") : ''}}</span></p>
-
-
-
-        <img width='70px' ng-src="http://openweathermap.org/img/w/{{weatherData.weather[0].icon}}.png">
-
+          <p ng-class="{cold: (weatherData.main.temp < 15 && units) || (weatherData.main.temp < 59 && !units),
+      warm: (weatherData.main.temp > 15 && units) || (weatherData.main.temp > 59 && !units) }">
+              <!--if there is no temp hide the unit symbol!!! -->
+              {{weatherData.main.temp }}<span>{{weatherData ? (units ? "°C" : "℉") : ''}}</span></p>
 
 
-        <p class="text-muted description">{{weatherData ? weatherData.weather[0].description + ' , humidity is at ' + weatherData.main.humidity + '% , winds at ' + weatherData.wind.speed + (units ? " meters/sec" : ' miles/hour' ): ''}}</p>
+
+          <img width='70px' ng-src="http://openweathermap.org/img/w/{{weatherData.weather[0].icon}}.png">
+
+
+
+          <p class="text-muted description">{{weatherData ? weatherData.weather[0].description + ' , humidity is at ' +
+            weatherData.main.humidity + '% , winds at ' + weatherData.wind.speed + (units ? " meters/sec" : ' miles/hour' ): ''}}</p>
+
+        </div>
+
+        <div class='col-md-12'>
+        <weather-forecast></weather-forecast>
+        </div>
+
+      </div>
+
     </div>
 
 

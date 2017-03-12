@@ -1,0 +1,18 @@
+<div class='container-fluid text-center'>
+<h1>5 day Forecast for {{weatherForecastData.city.name}}</h1>
+
+  <div ng-repeat='forecast in weatherForecastData.list'>
+    <p>
+      {{forecast.dt * 1000 | date : 'dd MMM'}}
+    </p>
+    <h3>{{forecast.weather[0].main}}</h3>
+    <p>
+
+    </p>
+  </div>
+
+<p>{{weatherForecastData.list[1]}}</p>
+<p>
+
+</p>
+</div>
