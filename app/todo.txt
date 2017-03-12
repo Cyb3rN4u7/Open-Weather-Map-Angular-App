@@ -1,0 +1,9 @@
+# TO DO
+
+# 1 The unit selector when the weather is displayed is changed but the units are not converting!
+- a solution could be to store the last api request , and re-send it to get the correct units .
+
+# 2 We need to add a Weather details view to be toggled when a user clicks
+a details button to display more information about the weather like humidity, min and max temps , pressure etc..
+
+# 3 A forecast view would be a fine addition to our app! 
