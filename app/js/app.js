@@ -33,10 +33,15 @@ angular.module('weatherApp', [
                         // Get the coordinates of the current position.
                         $scope.lat = position.coords.latitude;
                         $scope.lon = position.coords.longitude;
+                        // run the function after the coords are received
+                        $scope.getLocal();
                     });
                 });
             }
         }();
+
+
+
         $scope.getLocal = function() {
             $scope.error = '';
             openWeatherApi.getLocalWeather($scope.lat, $scope.lon, $scope.units)
