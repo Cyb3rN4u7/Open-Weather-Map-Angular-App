@@ -1,31 +1,37 @@
 /* app css stylesheet */
 
-#zip{
-  margin-left: 10px;
-}
-.cold{
-  color: blue;
-  font-size: 2em;
-}
-.warm{
-  color: red;
-  font-size: 2em;
+#zip {
+    margin-left: 10px;
 }
 
-.options{
-  margin: 20px auto ;
+.cold {
+    color: blue;
+    font-size: 2em;
 }
-.btn.btn-default.btn-options.ng-binding{
+
+.warm {
+    color: red;
+    font-size: 2em;
+}
+
+.options {
+    margin: 20px auto;
+}
+
+.btn.btn-default.btn-options.ng-binding {
     background-color: orange;
-    color:white;
+    color: white;
     font-weight: bold;
 }
-.location-title{
-  font-size: 4em;
+
+.location-title {
+    font-size: 4em;
 }
-.weather-main{
-  font-size: 3em;
+
+.weather-main {
+    font-size: 3em;
 }
-.description{
-  font-size:1.3em;
+
+.description {
+    font-size: 1.3em;
 }
