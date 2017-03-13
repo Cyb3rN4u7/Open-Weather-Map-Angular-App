@@ -12,6 +12,8 @@ angular.module('weatherApp', [
         $scope.options = {};
         // if true show the options form
         $scope.showOptions = false;
+        // show forecast if true
+        $scope.showForecast = false;
         // if true set metric units otherwise imperial
         $scope.units = true;
 
@@ -62,6 +64,7 @@ $scope.today += 1;
         };
 
         $scope.getCity = function() {
+          $scope.getCityForecast();
             openWeatherApi.getByCityName($scope.options.city, $scope.units)
                 .success(function(result) {
                     $scope.weatherData = result;
@@ -76,6 +79,19 @@ $scope.today += 1;
 $scope.getLocalForecast = function(){
   $scope.error = '';
   openWeatherApi.getLocalWeatherForecast($scope.lat, $scope.lon, $scope.units)
+      .success(function(result) {
+          $scope.weatherForecastData = result;
+      }).error(function(error, status) {
+
+          $scope.error = 'Status : ' + status + ' Something went wrong!';
+
+
+      });
+};
+
+$scope.getCityForecast = function(){
+  $scope.error = '';
+  openWeatherApi.getCityWeatherForecast($scope.options.city, $scope.units)
       .success(function(result) {
           $scope.weatherForecastData = result;
       }).error(function(error, status) {
@@ -120,6 +136,10 @@ $scope.getLocalForecast = function(){
             getLocalWeatherForecast:  function(lat, lon, units) {
                 units = units ? '&units=metric' : '&units=imperial';
                 return $http.jsonp(apiForecastUrl + 'lat=' + lat + '&lon=' + lon + units + apiKey + cb);
+            },
+            getCityWeatherForecast: function(name, units) {
+                units = units ? '&units=metric' : '&units=imperial';
+                return $http.jsonp(apiForecastUrl + 'q=' + name + units + apiKey + cb);
             }
 
         };
