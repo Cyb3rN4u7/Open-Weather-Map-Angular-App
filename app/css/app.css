@@ -26,6 +26,7 @@
 
 .location-title {
     font-size: 4em;
+    margin:40px;
 }
 
 .weather-main {
@@ -34,4 +35,20 @@
 
 .description {
     font-size: 1.3em;
+}
+.table-contents{
+  font-size:1.2em;
+  letter-spacing: 1.2px;
+  font-weight:bold;
+  background-color: lightgrey;
+border: 3px solid black;
+
+}
+
+
+.table-titles{
+  font-size: 2em;
+}
+table{
+
 }

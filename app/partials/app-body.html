@@ -1,4 +1,4 @@
-<div class='container text-center' ng-controller='weatherCtrl'>
+<div class='container-fluid text-center' ng-controller='weatherCtrl'>
     <div class='jumbotron'>
         <h1>Weather App </h1>
 
@@ -6,7 +6,7 @@
 
         <a href="#" class='btn btn-default btn-options' ng-click='showOptions = !showOptions'> {{showOptions ? "Hide" : "Options"}}</a>
         <a href='#' class='btn btn-default ' ng-click='getLocal()'>Local Weather</a>
-        <a href="#" class='btn btn-default' ng-click='units = !units'>  {{units ? "°C" : "℉"}}</a>
+        <!--<a href="#" class='btn btn-default' ng-click='units = !units'>  {{units ? "°C" : "℉"}}</a>-->
 
         <city-weather-options ng-show='showOptions'></city-weather-options>
     </div>
@@ -14,22 +14,36 @@
 
 
     <div class='container weather-data'>
-
-        <h2 class='location-title'>{{weatherData ? (weatherData.name +','+ weatherData.sys.country) : '' }} </h2>
-        <p class='weather-main'>{{weatherData.weather[0].main}}</p>
-
-        <p ng-class="{cold: (weatherData.main.temp < 15 && units) || (weatherData.main.temp < 59 && !units),
-    warm: (weatherData.main.temp > 15 && units) || (weatherData.main.temp > 59 && !units) }">
-            <!--if there is no temp hide the unit symbol!!! -->
-            {{weatherData.main.temp }}<span>{{weatherData ? (units ? "°C" : "℉") : ''}}</span></p>
+      <div class="row">
+        <div class='col-md-12'>
 
 
+          <h2 class='location-title'>{{weatherData ? (weatherData.name +','+ weatherData.sys.country) : '' }} </h2>
+          <p class='weather-main'>{{weatherData.weather[0].main}}</p>
 
-        <img width='70px' ng-src="http://openweathermap.org/img/w/{{weatherData.weather[0].icon}}.png">
+          <p ng-class="{cold: (weatherData.main.temp <= 15 && units) || (weatherData.main.temp <= 59 && !units),
+      warm: (weatherData.main.temp > 15 && units) || (weatherData.main.temp >= 59 && !units) }">
+              <!--if there is no temp hide the unit symbol!!! -->
+              {{weatherData.main.temp }}<span>{{weatherData ? (units ? "°C" : "℉") : ''}}</span></p>
 
 
 
-        <p class="text-muted description">{{weatherData ? weatherData.weather[0].description + ' , humidity is at ' + weatherData.main.humidity + '% , winds at ' + weatherData.wind.speed + (units ? " meters/sec" : ' miles/hour' ): ''}}</p>
+          <img width='70px' ng-src="http://openweathermap.org/img/w/{{weatherData.weather[0].icon}}.png">
+
+
+
+          <p class="text-muted description">{{weatherData ? weatherData.weather[0].description + ' , humidity is at ' +
+            weatherData.main.humidity + '% , winds at ' + weatherData.wind.speed + (units ? " meters/sec" : ' miles/hour' ): ''}}</p>
+
+        </div>
+
+        <div class='col-md-12'>
+        <a href="#" class='btn btn-default btn-options' ng-click='showForecast = !showForecast'> {{showForecast ? "Hide" : "Show forecast for " +weatherData.name}}</a>
+        <weather-forecast ng-show='showForecast'></weather-forecast>
+        </div>
+
+      </div>
+
     </div>
 
 
