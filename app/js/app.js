@@ -42,7 +42,7 @@ $scope.today += 1;
                         $scope.lon = position.coords.longitude;
                         // run the functions after the coords are received
                         $scope.getLocal();
-                        $scope.getLocalForecast();
+
                     });
                 });
             }
@@ -52,6 +52,7 @@ $scope.today += 1;
 
         $scope.getLocal = function() {
             $scope.error = '';
+              $scope.getLocalForecast();
             openWeatherApi.getLocalWeather($scope.lat, $scope.lon, $scope.units)
                 .success(function(result) {
                     $scope.weatherData = result;
