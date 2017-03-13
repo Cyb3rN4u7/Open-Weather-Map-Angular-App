@@ -21,17 +21,7 @@ angular.module('weatherApp', [
 $scope.today += 1;
         };
 
-        $scope.getWeatherByZip = function() {
-            $scope.error = '';
-            //  alert('zip: ' + $scope.options.zip);
-            openWeatherApi.getByZip($scope.options.zip, $scope.options.country, $scope.units)
-                .success(function(result) {
-                    $scope.weatherData = result;
-                })
-                .error(function(error, status) {
-                    $scope.error = 'Status : ' + status + ' Something went wrong!';
-                });
-        };
+
         // added a geolocation function to run ASAP
         $scope.getLocation = function() {
             if (navigator.geolocation) {

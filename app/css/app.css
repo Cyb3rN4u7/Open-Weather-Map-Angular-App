@@ -19,11 +19,24 @@
 }
 
 .btn.btn-default.btn-options.ng-binding {
-    background-color: orange;
+    background-color: crimson;
     color: white;
     font-weight: bold;
+    font-size: 1.1em;
 }
-
+.btn.btn-primary.btn-forecast.ng-binding {
+    background-color: navy;
+    color: white;
+    font-weight: bold;
+    font-size: 1.8em;
+    margin:20px;
+}
+.btn.btn-default.btn-local{
+    background-color: green;
+    color: white;
+    font-weight: bold;
+      font-size: 1.1em;
+}
 .location-title {
     font-size: 4em;
     margin:40px;
@@ -36,19 +49,27 @@
 .description {
     font-size: 1.3em;
 }
-.table-contents{
+.table-contents.ng-scope{
   font-size:1.2em;
+  color:white;
   letter-spacing: 1.2px;
   font-weight:bold;
-  background-color: lightgrey;
-border: 3px solid black;
-
+  background-color: navy;
+border: none;
 }
-
+.table-contents:nth-child(2n+2) {
+  background: white;
+  color:black;
+}
 
 .table-titles{
   font-size: 2em;
+  background-color: white;
+  color:black;
 }
-table{
+
+table {
+  border-collapse: separate;
+  border-spacing: 0 0px;
 
 }
