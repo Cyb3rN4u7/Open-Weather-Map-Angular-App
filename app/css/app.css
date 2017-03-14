@@ -1,5 +1,13 @@
 /* app css stylesheet */
+h1.app-title{
+  font-size:5em;
+font-family: 'Monofett', cursive;
+color:navy;
 
+}
+.jumbotron{
+  background-color: transparent;
+}
 #zip {
     margin-left: 10px;
 }
