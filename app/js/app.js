@@ -108,6 +108,13 @@ $scope.getCityForecast = function(){
         replace: true
       }
     })
+    .directive('weatherDetails',function(){
+      return{
+        restrict:'E',
+        templateUrl: 'partials/weather-details.html',
+        replace: true
+      }
+    })
     .factory('openWeatherApi', ['$http', function openWeatherApiFactory($http) {
         var apiUrl = 'http://api.openweathermap.org/data/2.5/weather?';
         var apiForecastUrl = 'http://api.openweathermap.org/data/2.5/forecast/daily?';

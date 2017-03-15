@@ -20,7 +20,7 @@
 
           <h2 class='location-title'>{{weatherData ? (weatherData.name +','+ weatherData.sys.country) : '' }} </h2>
           <p class='weather-main'>{{weatherData.weather[0].main}}</p>
-
+          <img width='70px' ng-src="http://openweathermap.org/img/w/{{weatherData.weather[0].icon}}.png">
           <p ng-class="{cold: (weatherData.main.temp <= 15 && units) || (weatherData.main.temp <= 59 && !units),
       warm: (weatherData.main.temp > 15 && units) || (weatherData.main.temp >= 59 && !units) }">
               <!--if there is no temp hide the unit symbol!!! -->
@@ -28,7 +28,7 @@
 
 
 
-          <img width='70px' ng-src="http://openweathermap.org/img/w/{{weatherData.weather[0].icon}}.png">
+
 
 
 
@@ -36,6 +36,7 @@
             weatherData.main.humidity + '% , winds at ' + weatherData.wind.speed + (units ? " meters/sec" : ' miles/hour' ): ''}}</p>
 
         </div>
+        <weather-details></weather-details>
 
         <div class='col-md-12'>
         <a href="#" class='btn btn-primary btn-forecast' ng-click='showForecast = !showForecast'> {{weatherForecastData ? (showForecast ? "Hide" : "Show forecast for " +weatherData.name) : 'No forecast available'}}</a>

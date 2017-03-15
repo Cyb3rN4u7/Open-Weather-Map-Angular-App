@@ -1,1 +1,43 @@
 <!-- here we will present full detailed information about the weather -->
+<div class='container-fluid col-md-3 center-table ' >
+  <table class="table text-center ">
+     <thead>
+       <tr class=''>
+
+       </tr>
+     </thead>
+     <tbody class='container-fluid'>
+
+    <tr class='details-table-contents'>
+        <td> <p> Wind :  {{weatherData.wind.speed + " m/s"}}</p> </td>
+    </tr>
+    <tr class='details-table-contents'>
+        <td> <p>Humidity :  {{weatherData.main.humidity}} %</p> </td>
+    </tr>
+
+    <tr class='details-table-contents'>
+        <td> <p>Pressure:  {{weatherData.main.pressure}} hpa </p></td>
+    </tr>
+
+    <tr class='details-table-contents'>
+        <td> <p>Sunrise :  {{weatherData.sys.sunrise * 1000 | date: 'shortTime'}} </p> </td>
+    </tr>
+
+    <tr class='details-table-contents'>
+        <td> <p>Sunset :  {{weatherData.sys.sunset * 1000 | date: 'shortTime'}} </p> </td>
+    </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+     </tbody>
+  </table>
+</div>

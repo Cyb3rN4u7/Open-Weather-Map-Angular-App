@@ -1,4 +1,4 @@
-<div class='container-fluid '>
+<div class='container-fluid center-table col-md-8'>
 <h1 class='location-title text-center'>{{weatherForecastData ? 'Forecast for ' + weatherForecastData.city.name : ''}}</h1>
 
 <table class="table text-left">
@@ -13,20 +13,12 @@
    <tbody class='container-fluid'>
 
   <tr class='table-contents' ng-repeat='forecast in weatherForecastData.list'>
-
       <td> <h3>{{forecast.dt * 1000 | date : 'EEEE'}}</h3> </td>
       <td><img width='70px' ng-src="http://openweathermap.org/img/w/{{forecast.weather[0].icon}}.png">{{forecast.weather[0].description}}</td>
       <td>{{ forecast.speed + ' meters/sec'}}</td>
       <td><p>
         {{forecast ? forecast.temp.min + ' to '  + forecast.temp.max + (forecast ? (units ? "°C" : "℉") : ''): ''  }}
       </p>
-
-
-
-
-
-
-
   </tr>
 
    </tbody>

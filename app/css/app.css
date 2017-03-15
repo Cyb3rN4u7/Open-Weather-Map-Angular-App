@@ -1,25 +1,27 @@
 /* app css stylesheet */
-h1.app-title{
-  font-size:5em;
-font-family: 'Monofett', cursive;
-color:navy;
 
+h1.app-title {
+    font-size: 5em;
+    font-family: 'Monofett', cursive;
+    color: navy;
 }
-.jumbotron{
-  background-color: transparent;
+
+.jumbotron {
+    background-color: transparent;
 }
+
 #zip {
     margin-left: 10px;
 }
 
 .cold {
     color: blue;
-    font-size: 2em;
+    font-size: 2.5em;
 }
 
 .warm {
     color: red;
-    font-size: 2em;
+    font-size: 2.5em;
 }
 
 .options {
@@ -32,22 +34,25 @@ color:navy;
     font-weight: bold;
     font-size: 1.1em;
 }
+
 .btn.btn-primary.btn-forecast.ng-binding {
     background-color: navy;
     color: white;
     font-weight: bold;
     font-size: 1.8em;
-    margin:20px;
+    margin: 20px;
 }
-.btn.btn-default.btn-local{
+
+.btn.btn-default.btn-local {
     background-color: green;
     color: white;
     font-weight: bold;
-      font-size: 1.1em;
+    font-size: 1.1em;
 }
+
 .location-title {
     font-size: 4em;
-    margin:40px;
+    margin: 20px;
 }
 
 .weather-main {
@@ -56,28 +61,43 @@ color:navy;
 
 .description {
     font-size: 1.3em;
-}
-.table-contents.ng-scope{
-  font-size:1.2em;
-  color:white;
-  letter-spacing: 1.2px;
-  font-weight:bold;
-  background-color: navy;
-border: none;
-}
-.table-contents:nth-child(2n+2) {
-  background: white;
-  color:black;
+    margin: 10px auto 40px;
 }
 
-.table-titles{
-  font-size: 2em;
-  background-color: white;
-  color:black;
+.table-contents.ng-scope {
+    font-size: 1.2em;
+    color: white;
+    letter-spacing: 1.2px;
+    font-weight: bold;
+    background-color: navy;
+    border: none;
+}
+
+.table-contents:nth-child(2n+2) {
+    background: white;
+    color: black;
+}
+
+.table-titles {
+    margin-top: 50px;
+    font-size: 2em;
+    background-color: white;
+    color: black;
 }
 
 table {
-  border-collapse: separate;
-  border-spacing: 0 0px;
+    border-collapse: separate;
+    border-spacing: 0 0px;
+}
 
+.center-table {
+    margin: 0 auto !important;
+    float: none !important;
+}
+
+.table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td {
+    padding: 1px;
+}
+.details-table-contents{
+  font-size: 1.3em;
 }
