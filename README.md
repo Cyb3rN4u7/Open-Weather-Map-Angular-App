@@ -4,6 +4,7 @@
 An angular app that uses the open weather map api
 </br>This is a simple application made for exploring Angular and Git.
 </br>This app is using Angular Seed . https://github.com/angular/angular-seed.git
+</br> And the <a href='https://ngmap.github.io/' target='blank_'> The angularjs-google-maps</a>
 
 ## How to use it:
 </br>1) Git clone https://github.com/Cyb3rN4u7/Open-Weather-Map-Angular-App.git
