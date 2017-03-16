@@ -7,7 +7,7 @@ An angular app that uses the open weather map api
 
 ## How to use it:
 </br>1) Git clone https://github.com/Cyb3rN4u7/Open-Weather-Map-Angular-App.git
-</br>2) Install Node.js
+</br>2) <a href='https://nodejs.org/' target ='blank_'>Install Node.js</a>
 </br>3) In the folder run  npm install
 </br>4) Run npm run
 
