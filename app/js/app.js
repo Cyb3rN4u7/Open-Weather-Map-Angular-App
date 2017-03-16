@@ -2,7 +2,7 @@
 
 // Declare app level module which depends on views, and components
 angular.module('weatherApp', [
-        'ngRoute',
+        'ngRoute','ngMap',
         'myApp.version'
     ])
     .controller('weatherCtrl', ['$scope', 'openWeatherApi', '$timeout', function($scope, openWeatherApi, $timeout) {

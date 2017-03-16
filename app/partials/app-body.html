@@ -1,7 +1,9 @@
 <div class='container-fluid text-center' ng-controller='weatherCtrl'>
     <div class='jumbotron'>
         <h1 class='app-title'>Weather App </h1>
-
+<ng-map id="map" zoom="11" center="[{{weatherData.coord.lat +','+ weatherData.coord.lon}}]">
+<marker position="[{{weatherData.coord.lat +','+ weatherData.coord.lon}}]" title="how" animation="Animation.BOUNCE"></marker>
+</ng-map>
         <p style='color: red'>{{error}}</p>
 
         <a href="#" class='btn btn-default btn-options' ng-click='showOptions = !showOptions'> {{showOptions ? "Hide" : "Options"}}</a>
