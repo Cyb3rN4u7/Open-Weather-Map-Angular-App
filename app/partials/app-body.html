@@ -24,16 +24,15 @@
           <p ng-class="{cold: (weatherData.main.temp <= 15 && units) || (weatherData.main.temp <= 59 && !units),
       warm: (weatherData.main.temp > 15 && units) || (weatherData.main.temp >= 59 && !units) }">
               <!--if there is no temp hide the unit symbol!!! -->
-              {{weatherData.main.temp }}<span>{{weatherData ? (units ? "°C" : "℉") : ''}}</span></p>
+              {{weatherData.main.temp | number:1 }}<span>{{weatherData ? (units ? "°C" : "℉") : ''}}</span></p>
 
 
+          <p class="text-muted">{{weatherData ? (weatherData.weather[0].description) : '' }}</p>
+          <p>
+            <span class='min'>Min {{weatherData.main.temp_min | number:1}}°C</span>
+            <span class='max'>Max {{weatherData.main.temp_max | number:1}}°C</span>
+          </p>
 
-
-
-
-
-          <p class="text-muted description">{{weatherData ? weatherData.weather[0].description + ' , humidity is at ' +
-            weatherData.main.humidity + '% , winds at ' + weatherData.wind.speed + (units ? " meters/sec" : ' miles/hour' ): ''}}</p>
 
         </div>
         <weather-details></weather-details>

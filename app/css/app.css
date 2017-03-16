@@ -13,7 +13,19 @@ h1.app-title {
 #zip {
     margin-left: 10px;
 }
+.min{
+  background-color: blue;
+}
+.max{
+  background-color: orange;
+}
+.min , .max{
+padding: 3px 10px;
+font-size: 1.4em;
+color: white;
+border-radius: 4px;
 
+}
 .cold {
     color: blue;
     font-size: 2.5em;
@@ -59,17 +71,14 @@ h1.app-title {
     font-size: 3em;
 }
 
-.description {
-    font-size: 1.3em;
-    margin: 10px auto 40px;
-}
+
 
 .table-contents.ng-scope {
     font-size: 1.2em;
     color: white;
     letter-spacing: 1.2px;
     font-weight: bold;
-    background-color: navy;
+    background-color: silver;
     border: none;
 }
 
@@ -96,8 +105,24 @@ table {
 }
 
 .table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td {
-    padding: 1px;
+    padding: 5px;
 }
 .details-table-contents{
+  margin-top: 10px;
   font-size: 1.3em;
+}
+.forecast-center{
+  position: relative;
+top: 20px;
+}
+
+@media screen and (max-width: 722px) {
+  .table-contents{
+    font-size: 1em !important;
+
+  }
+  .forecast-center{
+    position: relative;
+  top: 10px;
+  }
 }
