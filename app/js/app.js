@@ -16,6 +16,8 @@ angular.module('weatherApp', [
         $scope.showForecast = false;
         // if true set metric units otherwise imperial
         $scope.units = true;
+        // show map if true
+        $scope.showMap = false;
 
         $scope.nextDay = function(){
 $scope.today += 1;
