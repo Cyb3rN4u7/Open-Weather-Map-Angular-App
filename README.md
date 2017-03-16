@@ -15,6 +15,7 @@ An angular app that uses the open weather map api
 And you are ready to use the app
 
 
-
-<img width="200" src="app/img/weather-app.png" alt="OpenWeather App"/>
-<img width="200" src="app/img/weather-app-main.png" alt="OpenWeather App"/>
+Image 1
+<img width="500" src="app/img/weather-app.png" alt="OpenWeather App"/>
+</br> Image 2
+<img width="500" src="app/img/weather-app-main.png" alt="OpenWeather App"/>
