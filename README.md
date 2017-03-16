@@ -15,4 +15,4 @@ And you are ready to use the app
 
 
 
-<img style='border-shade: 2px 2px grey' src="app/img/weather-app.png" alt="OpenWeather App"/>
+<img src="app/img/weather-app.png" alt="OpenWeather App"/>
