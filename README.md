@@ -16,4 +16,5 @@ And you are ready to use the app
 
 
 
-<img src="app/img/weather-app.png" alt="OpenWeather App"/>
+<img width="200" src="app/img/weather-app.png" alt="OpenWeather App"/>
+<img width="200" src="app/img/weather-app-main.png" alt="OpenWeather App"/>
