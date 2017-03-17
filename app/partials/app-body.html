@@ -30,8 +30,8 @@
                     <!--if there is no temp hide the unit symbol!!! -->
                     {{weatherData.main.temp | number:1 }}<span>{{weatherData ? (units ? "°C" : "℉") : ''}}</span></p>
                     <p>
-                        <span class='min'> {{weatherData.main.temp_min | number:1}}°C</span>
-                        <span class='max'> {{weatherData.main.temp_max | number:1}}°C</span>
+                        <span class='min'> {{weatherForecastData.list[0].temp.min | number:1}}°C</span>
+                        <span class='max'> {{weatherForecastData.list[0].temp.max | number:1}}°C</span>
                     </p>
 
 
