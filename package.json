@@ -1,9 +1,8 @@
 {
-  "name": "angular-seed",
-  "private": true,
-  "version": "0.0.0",
-  "description": "A starter project for AngularJS",
-  "repository": "https://github.com/angular/angular-seed",
+  "name": "Open-Weather-Map-Angular-App",
+  "version": "0.0.1",
+  "description": "A weather app",
+  "repository": "https://github.com/Cyb3rN4u7/Open-Weather-Map-Angular-App.git",
   "license": "MIT",
   "devDependencies": {
     "bower": "^1.7.7",
