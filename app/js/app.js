@@ -120,7 +120,8 @@ $scope.getCityForecast = function(){
     .factory('openWeatherApi', ['$http', function openWeatherApiFactory($http) {
         var apiUrl = 'http://api.openweathermap.org/data/2.5/weather?';
         var apiForecastUrl = 'http://api.openweathermap.org/data/2.5/forecast/daily?';
-        var apiKey = '&APPID=3f2a43f3dff44e5e01573b363cbea2fd';
+        // put here your open weather map api key ex: &APPID=jdjjfdkfkdkf94857489574
+        var apiKey = '';
         var cb = '&callback=JSON_CALLBACK';
 
         return {
