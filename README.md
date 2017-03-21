@@ -41,4 +41,5 @@ And you are ready to use the app
 
 
 
-<img src="app/img/weather-app-main.png" alt="OpenWeather App"/>
+<img src="app/img/weather-app-main.png" alt="Open-Weather-Map-Angular-App"/>
+<img src="app/img/weather-app.png" alt="Open-Weather-Map-Angular-App"/>
