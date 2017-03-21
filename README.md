@@ -7,15 +7,17 @@ An angular app that uses the open weather map api
 </br> And the <a href='https://ngmap.github.io/' target='blank_'> The angularjs-google-maps</a>
 
 ## How to use it:
-* <a href='https://nodejs.org/' target ='blank_'>Install Node.js </a>
+ <a href='https://nodejs.org/' target ='blank_'>Install Node.js </a>
+
+ 
+
+
 ```
  git clone https://github.com/Cyb3rN4u7/Open-Weather-Map-Angular-App.git [my-app-name]
  cd [my-app-name]
  npm install
  npm start
-
 ```
-
 
 
 
