@@ -13,7 +13,7 @@ An angular app that uses the open weather map api
  <script src="http://maps.google.com/maps/api/js?key=sdfgfdsgfdgdfgdfg"></script> 
  ```
  * with key=your_google_maps_api_KEY
- * inside app/js/app.js in the .factory you will put your open weather map api key in the var apiKey = '&APPID=Your_API_KEY'; 
+ * inside app/js/app.js you will put your open weather map api key 
 ```
         ...
   .factory('openWeatherApi', ['$http', function openWeatherApiFactory($http) {
