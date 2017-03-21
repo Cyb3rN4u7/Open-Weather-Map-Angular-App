@@ -14,7 +14,16 @@ An angular app that uses the open weather map api
  ```
  * with key=your_google_maps_api_KEY
  * inside app/js/app.js in the .factory you will put your open weather map api key in the var apiKey = '&APPID=Your_API_KEY'; 
+```
+        ...
+  .factory('openWeatherApi', ['$http', function openWeatherApiFactory($http) {
+        var apiUrl = 'http://api.openweathermap.org/data/2.5/weather?';
+        var apiForecastUrl = 'http://api.openweathermap.org/data/2.5/forecast/daily?';
+        // put here your open weather map api key ex: &APPID=jdjjfdkfkdkf94857489574
+        var apiKey = '';
+        ...
 
+```
  
 
 
