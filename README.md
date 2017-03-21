@@ -8,7 +8,9 @@ An angular app that uses the open weather map api
 
 ## How to use it:
  * <a href='https://nodejs.org/' target ='blank_'>Install Node.js </a>
- * In index.html add before </body> tag <script src="http://maps.google.com/maps/api/js?key=sdfgfdsgfdgdfgdfg"></script> with key=your_google_maps_api_KEY
+ ```
+ In index.html add before </body> tag <script src="http://maps.google.com/maps/api/js?key=sdfgfdsgfdgdfgdfg"></script> with key=your_google_maps_api_KEY
+ ```
  * inside app/js/app.js in the .factory you will put your open weather map api key in the var apiKey = '&APPID=Your_API_KEY'; 
 
  
